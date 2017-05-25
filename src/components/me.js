@@ -3,13 +3,17 @@
  */
 
 import React, {Component} from 'react';
+import { Router, Route, hashHistory,Link } from 'react-router';
 
 
 export default class Me extends Component{
     render(){
-        console.log("执行几次")
+        console.log(this.props.children)
         return (
-            <div>二级页面</div>
+            <div ><Link to="/meto">二级页面</Link>
+
+                {this.props.children}
+            </div>
         )
 
         console.log("执行几次")

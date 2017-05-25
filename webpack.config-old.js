@@ -6,7 +6,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
     entry:{
-        'main': path.resolve(__dirname, 'src/index.js'),
+        'main': path.resolve(__dirname, 'src/js/main.js'),
         vendor:['react','react-dom','react-router']
     },
 

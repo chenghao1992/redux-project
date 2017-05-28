@@ -36,7 +36,7 @@ export default class LayoutIndex  extends Component{
                                 <Menu.Item key="1"><Link to="/">Index</Link></Menu.Item>
                                 <Menu.Item key="2"><Link to="/me">option1</Link></Menu.Item>
                                 <Menu.Item key="3"><Link to="/todoDemo">option2</Link></Menu.Item>
-                                <Menu.Item key="4"><Link to="/redux">redux</Link></Menu.Item>
+                                <Menu.Item key="4"><Link to="/test-ownProps">test-ownProps</Link></Menu.Item>
                             </SubMenu>
                             <SubMenu key="sub2" title={<span><Icon type="laptop"/>subnav 2</span>}>
                                 <Menu.Item key="5">option5</Menu.Item>

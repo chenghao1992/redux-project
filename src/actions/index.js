@@ -17,3 +17,13 @@ export const toggleTodo = (id) => ({
   type: 'TOGGLE_TODO',
   id
 })
+
+export const changeStatus=(status)=>({
+    type:'changeStatus',
+    status
+})
+
+export const changeTest1=(a)=>({
+    type:'changeTest1',
+    a
+})

@@ -1,4 +1,4 @@
-{
+ {
   "name": "webpackTest",
   "version": "1.0.0",
   "description": "",
@@ -6,7 +6,7 @@
   "comment": "注释：scripts属性里面是配置npm启动的，dev:开发环境;pub:生产环境.",
   "paramsDetail": "参数说明：hot--热加载，watch--件事变化，inline--实时更新，port--自定义端口号，默认8080，colors--编译时不同的颜色显示，config：自定义加载配置文件，progress--显示模块加载进度",
   "scripts": {
-    "dev": "webpack-dev-server --hot --watch --inline --port 8888 --colors",
+    "dev": "webpack-dev-server --hot --watch --inline --port 8888 --colors --open",
     "pub": "webpack --config webpack.config.pub.js"
   },
   "keywords": [],

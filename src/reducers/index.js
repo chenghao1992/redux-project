@@ -10,5 +10,4 @@ const todoApp = combineReducers({
   todos,
   visibilityFilter
 })
-console.log("todoApp:",todoApp)
 export default todoApp

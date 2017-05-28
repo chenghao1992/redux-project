@@ -21,7 +21,6 @@ const todo = (state, action) => {
 }
 // createReducer 函数
 const todos = (state = [], action) => {
-  console.log("state:",state)
   switch (action.type) {
     case 'ADD_TODO':
       return [

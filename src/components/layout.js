@@ -7,7 +7,6 @@ import { Router, Route, hashHistory,Link } from 'react-router';
 
 export default class LayoutIndex  extends Component{
     render() {
-        console.log(this.props.children);
         return (
             <Layout>
                 <Header className="header">

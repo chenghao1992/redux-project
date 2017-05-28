@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Index from '../components/defaultPage';
-import { changeStatus,changeTest1 } from '../actions'
+import { changeStatus,changeTest1 ,testFetch} from '../actions'
 // 使用 connect() 前，需要先定义 mapStateToProps 这个函数来指定如何把当前 Redux store state 映射到展示组件的 props 中
 /*
 mapStateToProps会订阅 Store，每当state更新的时候，就会自动执行，重新计算 UI 组件的参数，从而触发 UI 组件的重新渲染。
@@ -35,7 +35,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     },
     changeTest1:(params)=>{
         dispatch(changeTest1(params))
-    }
+    },
+    testFetch
+
 })
 
 const DefaultPage = connect(

@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router';
 
 // children就是组件引用时的子元素,但在使用路由了之后还不知道如何使用
-const Index = ({test2, children, changeStatus,changeTest1,test1,testFunc,a }) => {
+const Index = ({test2, children, changeStatus,changeTest1,test1,testFunc,a,testFetch }) => {
     console.log("test:",test1)
     return(
         <div>
@@ -16,6 +16,7 @@ const Index = ({test2, children, changeStatus,changeTest1,test1,testFunc,a }) =>
             <h2 onClick={()=>changeTest1('改变后的a的值')}>点击改变a的值</h2>
             <p>a的值：{a}</p>
             <Link to="/me">me{children}</Link>
+            <div onClick={testFetch}>点击</div>
         </div>
     )
 }

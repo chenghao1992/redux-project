@@ -36,7 +36,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     changeTest1:(params)=>{
         dispatch(changeTest1(params))
     },
-    testFetch
+    testFetch:()=>{
+        dispatch(testFetch())
+    }
 
 })
 

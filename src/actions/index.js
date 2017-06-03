@@ -1,3 +1,4 @@
+import Uitls from '../uitls/myfetch'
 let nextTodoId = 0
 export const addTodo = (text) =>{
   console.log("text:",text)
@@ -28,26 +29,60 @@ export const changeTest1=(a)=>({
     a
 })
 
+// export function testFetch(){
+//     // fetch login
+//     console.log('fetch')
+//     return dispatch => {
+//         fetch('../mock/package.json?name="ch"&age=24',{
+//             method: 'get',
+//         })
+//             .then(response => response.json())
+//             //请求成功后执行
+//             .then((data)=>{
+//                 console.log('data:',data)
+//                 dispatch({
+//                     type:'asyncTest',
+//                     data
+//                 })
+//             })
+//             //请求失败后执行
+//             .then(console.log('请求出错了'))
+//             .catch(function(ex) {
+//                 console.log('parsing failed', ex)
+//             })
+//     }
+
+// }
+
 export function testFetch(){
-    // fetch login
     console.log('fetch')
     return dispatch => {
-        fetch('../mock/package.json',{
-            method: 'get'
+        Uitls.get('../mock/package.js1on',{name:'ch',age:24},function (data) {
+            console.log('data:',data);
+            dispatch({
+                        type:'asyncTest',
+                        data
+                    })
+        },function () {
+            console.log('请求出错了')
         })
-            .then((response) => {
-                // 持久化
-                Storage.clear()
-                console.log(response)
-
-
-            })
-            .then((data)=>{
-                console.log(data)
-            })
-            .catch(function(ex) {
-                console.log('parsing failed', ex)
-            })
+        // fetch('../mock/package.json?name="ch"&age=24',{
+        //     method: 'get',
+        // })
+        //     .then(response => response.json())
+        //     //请求成功后执行
+        //     .then((data)=>{
+        //         console.log('data:',data)
+        //         dispatch({
+        //             type:'asyncTest',
+        //             data
+        //         })
+        //     })
+        //     //请求失败后执行
+        //     .then(console.log('请求出错了'))
+        //     .catch(function(ex) {
+        //         console.log('parsing failed', ex)
+        //     })
     }
 
 }

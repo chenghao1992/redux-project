@@ -5,8 +5,8 @@ import React, {Component} from 'react';
 import { Link } from 'react-router';
 import ArrCom from './ArrCom'
 // children就是组件引用时的子元素,但在使用路由了之后还不知道如何使用
-const Index = ({test2, children, changeStatus,changeTest1,test1,testFunc,a,testFetch,name='defaultValue',arr=[] }) => {
-    console.log("test:",test1)
+const Index = ({test2, children, changeStatus,changeTest1,test1,testFunc,a,testFetch,name='defaultValue',list=[] }) => {
+    console.log("list:",list)
     return(
         <div>
             defaultPage
@@ -20,8 +20,8 @@ const Index = ({test2, children, changeStatus,changeTest1,test1,testFunc,a,testF
             <div>
                 <strong>{name}</strong>
                 <ul>
-                    {arr.map(function(value,index){
-                        return (<li key={index}>{value}</li>)
+                    {list.map(function(value,index){
+                        return (<li key={index}>{value.data.title}</li>)
                     })}
                 </ul>
 

@@ -20,6 +20,11 @@ Utils.get=function (url,params,successFunc,errorFunc) {
     fetch(url, {
         method : 'GET'
     }).then(function(res){
+        console.log('response:',res);
+        console.log('ok:',res.ok);
+        console.log('status:',res.status);
+        console.log('statusText:',res.statusText);
+        console.log('type:',res.type);
         if(res.ok){
             res.json().then(function(data){
                 successFunc(data);
@@ -27,6 +32,8 @@ Utils.get=function (url,params,successFunc,errorFunc) {
         }else if(res.status === 401){
             console.log('请求失败');
             errorFunc();
+        }else {
+            errorFunc()
         }
     },function(){
         console.log('请求失败');

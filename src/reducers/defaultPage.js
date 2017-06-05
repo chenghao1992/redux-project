@@ -23,7 +23,7 @@ const defaultPage = (state =defaultStatus, action) => {
         case 'asyncTest':
             return{
                 ...state,
-                ...action.data
+                list:action.data.data.children
             }
         default:
             return {

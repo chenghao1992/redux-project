@@ -6,6 +6,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { createStore,applyMiddleware  } from 'redux'
 import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger'
 import { Provider } from 'react-redux'
 import DefaultPage from './containers/defaultPage'
 
@@ -15,7 +16,12 @@ import {Router,Route,hashHistory,IndexRoute,browserHistory} from 'react-router';
 import Layout from './components/layout'
 import TodoDemo from './components/TodoDemo'
 import TestOwnProps from './components/test-ownProps'
-const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),applyMiddleware(thunk))
+const middleware = [ thunk ]
+if (process.env.NODE_ENV !== 'production') {
+    middleware.push(createLogger())
+}
+console.log(process.env.NODE_ENV)
+const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),applyMiddleware(...middleware))
 // React-Redux 提供Provider组件，可以让容器组件拿到state。
 render(
   <Provider store={store}>

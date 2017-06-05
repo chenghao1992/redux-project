@@ -57,7 +57,7 @@ export const changeTest1=(a)=>({
 export function testFetch(){
     console.log('fetch')
     return dispatch => {
-        Uitls.get('../mock/package.js1on',{name:'ch',age:24},function (data) {
+        Uitls.get('https://www.reddit.com/r/frontend.json',{name:'ch',age:24},function (data) {
             console.log('data:',data);
             dispatch({
                         type:'asyncTest',

@@ -35,6 +35,7 @@ var config = {
                         loader: "style-loader"
                     },
                     {
+                        // loader:"css-loader?modules"  //这种是启用css Modules 但是和阿里的样式冲突了
                         loader:"css-loader"
                     },
                     {
@@ -58,7 +59,8 @@ var config = {
                     loader: "style-loader"
                 },
                 {
-                    loader:"css-loader"
+                    // loader:"css-loader?modules"//这种是启用css Modules 但是和阿里的样式冲突了
+                    loader:"css-loader?"
                 },
                 {
                     loader:"postcss-loader",        //给css属性加私有前缀

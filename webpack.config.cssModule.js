@@ -35,7 +35,9 @@ var config = {
                         loader: "style-loader"
                     },
                     {
-                        loader:"css-loader?modules"
+                        //这种是启用css Modules 但是和阿里的样式冲突了
+                        loader:"css-loader?modules&localIdentName=[name]_[local]"
+                        // loader:"css-loader"
                     },
                     {
                         loader:"postcss-loader",        //给css属性加私有前缀
@@ -58,7 +60,9 @@ var config = {
                     loader: "style-loader"
                 },
                 {
-                    loader:"css-loader?modules"
+                    //这种是启用css Modules 但是和阿里的样式冲突了
+                    loader:"css-loader?modules&localIdentName=[name]_[local]"
+                    // loader:"css-loader?"
                 },
                 {
                     loader:"postcss-loader",        //给css属性加私有前缀
@@ -72,7 +76,7 @@ var config = {
                     }
                 },
                 {
-                    loader: "less-loader"
+                    loader: "less-loader?sourceMap=true"
                 }
                 ]
         },
@@ -96,7 +100,7 @@ var config = {
             }
         }),
         new webpack.NoEmitOnErrorsPlugin(),
-        new webpack.HotModuleReplacementPlugin(),         //这个组件也影响实时更新  但是加上去会报错
+        // new webpack.HotModuleReplacementPlugin(),         //这个组件也影响实时更新  但是加上去会报错
         new webpack.LoaderOptionsPlugin({ //它的用途是帮助人们从 webpack 1 迁移至 webpack 2  为了兼容旧的 loaders，loaders 可以通过插件来切换到压缩模式
             minimize: true,
             debug: false,

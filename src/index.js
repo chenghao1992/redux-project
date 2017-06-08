@@ -1,6 +1,6 @@
-import './css/antd.min.css';
+import './css/antd.min.css'
 import './css/layout.css';
-
+// 使用css Modules 后样式这样引入会失效，只用使用link标签引入，还不知道如何解释
 
 import React from 'react'
 import { render } from 'react-dom'

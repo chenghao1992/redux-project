@@ -1,3 +1,23 @@
+
+@link_color:#549ee3;
+
 .font_30{
   font-size: 30px;
+}
+
+.c_red{
+  composes: font_30;
+  color: red;
+}
+
+:global(.font_w){
+  font-weight: 600;
+}
+
+.link{
+  color:@link_color;
+}
+
+[data-role='default-link']{
+  color:sandybrown;
 }

@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import Index from '../components/defaultPage';
 import { changeStatus,changeTest1 ,testFetch} from '../actions'
 // 使用 connect() 前，需要先定义 mapStateToProps 这个函数来指定如何把当前 Redux store state 映射到展示组件的 props 中
+// connect()可以在整个react应用的任意组件中获取store中的数据
 /*
 mapStateToProps会订阅 Store，每当state更新的时候，就会自动执行，重新计算 UI 组件的参数，从而触发 UI 组件的重新渲染。
 mapStateToProps的第一个参数总是state对象，还可以使用第二个参数，代表容器组件的props对象,函数名字随便取，对应就行。

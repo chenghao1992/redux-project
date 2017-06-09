@@ -34,8 +34,8 @@ const Index = ({test2, children, changeStatus,changeTest1,test1,testFunc,a,testF
             <div className={styles.c_red}>测试css Modules样式继承</div>
             <div className={classNames('font_w',styles.c_red)}>测试css Modules全局样式</div>
             <div className={styles.link}>测试less变量</div>
-            <div className={styles.link} data-role="default-link">测试覆盖样式1111</div>
-            <h2>node 启动111</h2>
+            <div className={styles.link} data-role="default-link">测试覆盖样式1111222</div>
+            <h2>node 启动11133322222</h2>
         </div>
     )
 }

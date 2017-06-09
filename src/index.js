@@ -20,8 +20,12 @@ const middleware = [ thunk ]
 if (process.env.NODE_ENV !== 'production') {
     middleware.push(createLogger())
 }
-console.log(process.env.NODE_ENV)
+
 const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),applyMiddleware(...middleware))
+console.log('store----',store)
+console.log('getState----',store.getState())
+console.log('dispatch----',store.dispatch)
+
 // React-Redux 提供Provider组件，可以让容器组件拿到state。
 render(
   <Provider store={store}>

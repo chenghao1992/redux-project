@@ -11,6 +11,7 @@ import { Provider } from 'react-redux'
 import DefaultPage from './containers/defaultPage'
 
 import Me from './components/me'
+import MeTo from './components/meto'
 import reducer from './reducers/index'
 import {Router,Route,hashHistory,IndexRoute,browserHistory} from 'react-router';
 import Layout from './components/layout'
@@ -32,7 +33,9 @@ render(
       <Router history={hashHistory}>
           <Route path='/' component={Layout}>
               <IndexRoute component={DefaultPage}></IndexRoute>
-              <Route path='/me' component={Me}></Route>
+              <Route path='/me' component={Me}>
+                  <Route path='/meto' component={MeTo}></Route>
+              </Route>
               <Route path='/todoDemo' component={TodoDemo}></Route>
               <Route path='/test-ownProps' component={TestOwnProps}></Route>
           </Route>
